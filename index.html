@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html CRUD with Pure JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <h1 class="main-title">CRUD CAR by Luis Mex</h1>
+</div>
+
+<body>
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <table class="table table-striped table-hover">
+            <tr>
+                <td>
+                    <form onsubmit="event.preventDefault();onFormSubmit();">
+                        <div>
+                            <label> Brand </label>
+                            <label class="validation-error hide" id="Error">
+                  This field is required.
+                </label>
+                            <input type="text" name="Brand" id="Brand" />
+                        </div>
+                        <div>
+                            <label>Model</label>
+                            <input type="text" name="Model" id="Model" />
+                        </div>
+                        <div>
+                            <label>Color</label>
+                            <input type="text" name="Color" id="Color" />
+                        </div>
+                        <div>
+                            <label>Year</label>
+                            <input type="text" name="Year" id="Year" />
+                        </div>
+                        <div>
+                            <label>Price</label>
+                            <input type="text" name="Price" id="Price" />
+                        </div>
+
+                        <div class="form-action-buttons">
+                            <input type="submit" value="Submit" />
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <table class="list" id="CarList">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Brand</th>
+                                <th>Model</th>
+                                <th>Color</th>
+                                <th>Year</th>
+                                <th>Price</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
